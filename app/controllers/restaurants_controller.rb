@@ -12,6 +12,7 @@ class RestaurantsController < ApplicationController
   end
 
   def edit
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def delete
@@ -26,6 +27,16 @@ class RestaurantsController < ApplicationController
       render :new 
     end 
   end 
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+  
+    if @restaurant.update(restaurant_params)
+      redirect_to restaurants_path
+    else
+      render :edit
+    end
+  end
 
   private 
 

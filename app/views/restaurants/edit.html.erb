@@ -1,2 +1,13 @@
-<h1>Restaurants#edit</h1>
-<p>Find me in app/views/restaurants/edit.html.erb</p>
+<h1>Edit Restaurant</h1>
+    <%= form_for @restaurant do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :visit %>
+    <%=f.date_select(:visit, :order => [:month, :day, :year]) %>
+
+    <%=f.label :review%>
+    <%=f.text_area :review%>
+
+    <%= f.submit %>
+<% end %> 
