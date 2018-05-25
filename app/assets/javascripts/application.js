@@ -14,3 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+// I added the below based on a tutorial for adding bootstrap so I can do a star rating system
+//= require jquery3
+//= require popper
+//= require bootstrap
+//= require_tree .
